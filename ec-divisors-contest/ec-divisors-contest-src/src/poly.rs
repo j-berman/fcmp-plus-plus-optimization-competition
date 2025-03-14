@@ -121,7 +121,7 @@ impl<F: From<u64> + Zeroize + PrimeField> Add<&Self> for Poly<F> {
   type Output = Self;
 
   fn add(mut self, other: &Self) -> Self {
-    // Expand to be the neeeded size
+    // Expand to be the needed size
     while self.y_coefficients.len() < other.y_coefficients.len() {
       self.y_coefficients.push(F::ZERO);
     }
@@ -545,12 +545,12 @@ impl<F: From<u64> + Zeroize + PrimeField> Poly<F> {
         y_pow: numerator_coefficient.y_pow.wrapping_sub(denominator_dividing_coefficient.y_pow),
         x_pow: numerator_coefficient.x_pow.wrapping_sub(denominator_dividing_coefficient.x_pow),
       };
-      let fallabck_powers_of_yx = CoefficientIndex { y_pow: 0, x_pow: 0 };
+      let fallback_powers_of_yx = CoefficientIndex { y_pow: 0, x_pow: 0 };
       let mut quotient_term = quotient_structure.clone();
       ct_set(
         &mut quotient_term,
         // If the numerator coefficient isn't >=, proper_powers_of_yx will have garbage in them
-        <_>::conditional_select(&fallabck_powers_of_yx, &proper_powers_of_yx, meaningful_iteration),
+        <_>::conditional_select(&fallback_powers_of_yx, &proper_powers_of_yx, meaningful_iteration),
         q,
       );
 

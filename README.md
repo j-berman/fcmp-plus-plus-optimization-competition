@@ -145,7 +145,7 @@ The best solution for an optimized `ec-divisors` will be awarded 250 XMR.
 3) Invite the judges (@j-berman and @jeffro256) as collaborators to the
 repository.
 
-We will acknolwedge receipt of your submission via a "thumbs up" reaction to
+We will acknowledge receipt of your submission via a "thumbs up" reaction to
 your PR.
 
 You may also submit a patch to @jberman:monero.social on Matrix.

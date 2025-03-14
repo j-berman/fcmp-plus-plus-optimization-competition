@@ -34,7 +34,7 @@ pub trait DivisorCurve: Group + ConstantTimeEq + ConditionallySelectable + Zeroi
   ///
   /// Section 2 of the security proofs define this modulus.
   ///
-  /// This MUST NOT be overriden.
+  /// This MUST NOT be overridden.
   // TODO: Move to an extension trait
   fn divisor_modulus() -> Poly<Self::FieldElement> {
     Poly {
@@ -131,7 +131,7 @@ fn line<C: DivisorCurve>(a: C, b: C) -> Poly<C::FieldElement> {
 
   // The following calculation assumes neither point is the point at infinity
   // If either are, we use a prior result
-  // To ensure we can calculcate a result here, set any points at infinity to the generator
+  // To ensure we can calculate a result here, set any points at infinity to the generator
   let a = <_>::conditional_select(&a, &C::generator(), a_is_identity);
   let b = <_>::conditional_select(&b, &C::generator(), b_is_identity);
   // It also assumes a, b aren't additive inverses which is also covered by a prior result
@@ -201,7 +201,7 @@ pub fn new_divisor<C: DivisorCurve>(points: &[C]) -> Option<Poly<C::FieldElement
 
     // Draw the line between those points
     // These unwraps are branching on the length of the iterator, not violating the constant-time
-    // priorites desired
+    // priorities desired
     divs.push((2, a + b.unwrap_or(C::identity()), line::<C>(a, b.unwrap_or(-a))));
   }
 
@@ -331,7 +331,7 @@ impl<F: Zeroize + PrimeFieldBits> ScalarDecomposition<F> {
       }
     }
 
-    // Calculcate the sum of the coefficients
+    // Calculate the sum of the coefficients
     let mut sum_of_coefficients: u64 = 0;
     for decomposition in &decomposition {
       sum_of_coefficients += *decomposition;
