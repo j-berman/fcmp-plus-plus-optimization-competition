@@ -1,8 +1,7 @@
 # FCMP++ Optimization Competition
 
-## This is a draft for a competition which will may be ran. It is not final,
-## not active, and not valid to submit for. No offerings of any kind are made
-## to any reader.
+The contest will open for submissions **Monday, April 28th at 17:00 UTC**, and
+we will stop accepting submissions **Monday, June 30th at 17:00 UTC**!
 
 The goal of this contest is to provide optimized implementations of
 [`helioselene`](https://github.com/kayabaNerve/fcmp-plus-plus/tree/develop/crypto/helioselene)
