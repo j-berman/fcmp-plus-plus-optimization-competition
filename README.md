@@ -7,7 +7,9 @@ We also clarify this explicit requirement for helioselene submissions:
 contestants **must** use the `dalek-ff-group` crate's `FieldElement` as the
 `Scalar` type in the Selene curve, and as the `Field` type in the Helios curve,
 maintaining the existing API, functionality, and interoperability, without a
-doubled maintenance burden.
+doubled maintenance burden. Submissions **must not** make any changes to the
+Ed25519 field arithmetic, maintaining the usage of and interoperability with
+`dalek-ff-group`'s `FieldElement` type.
 
 We again strongly advise contestants use [Crandall's reduction algorithm](https://patents.google.com/patent/US5159632A/en),
 as [that was a core reason for the prime chosen for the Helios and Selene curves](https://gist.github.com/tevador/4524c2092178df08996487d4e272b096).
