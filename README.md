@@ -1,7 +1,22 @@
+# UPDATE: helioselene submission deadline EXTENDED
+
+We have extended the deadline for `helioselene` submissions to **Thursday, July
+10th at 17:00 UTC**. The `helioselene` contest is still open to all.
+
+We also clarify this explicit requirement for helioselene submissions:
+contestants **must** use the `dalek-ff-group` crate's `FieldElement` as the
+`Scalar` type in the Selene curve, and as the `Field` type in the Helios curve,
+maintaining the existing API, functionality, and interoperability, without a
+doubled maintenance burden.
+
+We again strongly advise contestants use [Crandall's reduction algorithm](https://patents.google.com/patent/US5159632A/en),
+as [that was a core reason for the prime chosen for the Helios and Selene curves](https://gist.github.com/tevador/4524c2092178df08996487d4e272b096).
+
+The `ec-divisors` contest is currently closed for submissions.
+
 # FCMP++ Optimization Competition
 
-The contest will open for submissions **Monday, April 28th at 17:00 UTC**, and
-we will stop accepting submissions **Monday, June 30th at 17:00 UTC**!
+The contest will open for submissions **Monday, April 28th at 17:00 UTC**!
 
 The goal of this contest is to provide optimized implementations of
 [`helioselene`](https://github.com/kayabaNerve/fcmp-plus-plus/tree/develop/crypto/helioselene)

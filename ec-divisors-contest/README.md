@@ -1,3 +1,7 @@
+## Update
+
+The `ec-divisors` contest is currently **closed** for submissions.
+
 ## Overview
 
 Welcome, contestant!
